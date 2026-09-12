@@ -19,9 +19,12 @@ public:
     void pop();              // remove the top (does nothing if empty)
     int top() const;         // look at the top without removing it
     bool isEmpty() const;
+    bool isFull() const;
     int size() const;
 
 private:
+    int data[100];
+    int topIndex;
     // This is the REPRESENTATION. It's private on purpose: nothing
     // outside this class should touch data_ directly, or depend on it
     // being a vector specifically. If we swap this out for a linked

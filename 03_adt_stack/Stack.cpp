@@ -24,6 +24,22 @@ int Stack::top() const {
 
 bool Stack::isEmpty() const {
     // TODO: return whether data_ has zero elements
+    if (topIndex > 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+bool Stack::isFull() const {
+    // TODO: return whether data_ has zero elements
+    if (topIndex != 99) {
+        return false;
+    }
+    else {
+        return true;
+    }
 }
 
 int Stack::size() const {
