@@ -20,6 +20,7 @@ int main() {
     s.pop();
     std::cout << "After pop, top: " << s.top() << std::endl;
     std::cout << "Is empty? " << (s.isEmpty() ? "yes" : "no") << std::endl;
+    std::cout << "Is full? " << (s.isFull() ? "yes" : "no") << std::endl;
 
     return 0;
 }

@@ -20,6 +20,7 @@ int Stack::top() const {
     // TODO: return the top element of data_
     // undefined if empty -- callers should check isEmpty() first. We'll
     // harden this kind of thing later in the course.
+    return 1;
 }
 
 bool Stack::isEmpty() const {
@@ -44,4 +45,5 @@ bool Stack::isFull() const {
 
 int Stack::size() const {
     // TODO: return how many elements are in data_ (cast to int)
+    return (topIndex + 1);
 }
