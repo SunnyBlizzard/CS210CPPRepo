@@ -11,9 +11,12 @@
 #include <iostream>
 #include <ostream>
 
+Stack::Stack() {
+    topIndex = 0;
+}
+
 void Stack::push(int value) {
-    // TODO: add value to the top of data_ (vector has a method for this)
-    if (topIndex == 99) {
+    if (isFull()) {
         std::cout<<"Stack overflow"<<std::endl;
     }
     else {
@@ -23,7 +26,6 @@ void Stack::push(int value) {
 }
 
 void Stack::pop() {
-    // TODO: if data_ isn't empty, remove the top element
     if (isEmpty()) {
         std::cout<<"Stack underflow"<<std::endl;
     }
@@ -33,7 +35,7 @@ void Stack::pop() {
     }
 }
 
-int Stack::top() const {
+int Stack::peek() const {
     // undefined if empty -- callers should check isEmpty() first. We'll
     // harden this kind of thing later in the course.
     if (isEmpty()) {
@@ -46,20 +48,20 @@ int Stack::top() const {
 }
 
 bool Stack::isEmpty() const {
-    if (topIndex > 0) {
-        return false;
+    if (topIndex == 0) {
+        return true;
     }
     else {
-        return true;
+        return false;
     }
 }
 
 bool Stack::isFull() const {
-    if (topIndex != 99) {
-        return false;
+    if (topIndex == 100) {
+        return true;
     }
     else {
-        return true;
+        return false;
     }
 }
 
