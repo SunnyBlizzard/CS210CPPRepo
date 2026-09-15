@@ -10,15 +10,18 @@
 int main() {
     Stack s;
 
-    s.push(10);
-    s.push(20);
-    s.push(30);
-
     std::cout << "Stack size: " << s.size() << std::endl;
-    std::cout << "Top: " << s.peek() << std::endl;
+    for (int i = 1; i < 101; i++) {
+        s.push(i);
+        std::cout << "Top: " << s.peek() << std::endl;
+    }
+    std::cout << "Is empty? " << (s.isEmpty() ? "yes" : "no") << std::endl;
+    std::cout << "Is full? " << (s.isFull() ? "yes" : "no") << std::endl;
+    for (int i = 100; i > 0; i--) {
+        s.pop();
+        std::cout << "After pop, top: " << s.peek() << std::endl;
+    }
 
-    s.pop();
-    std::cout << "After pop, top: " << s.peek() << std::endl;
     std::cout << "Is empty? " << (s.isEmpty() ? "yes" : "no") << std::endl;
     std::cout << "Is full? " << (s.isFull() ? "yes" : "no") << std::endl;
 
